@@ -114,4 +114,19 @@ router.post('/courses', adminMiddleware ,async (req,res)=>{
    
 })
 
+router.get('/courses', adminMiddleware, (req,res)=>{
+    try{
+        Course.find({  
+        })
+        .then(function (values){
+            res.json({
+                courses:values
+            })
+        })
+    }catch(error){
+         console.log('something went wrong in admin routes');
+         throw{error};
+    }
+})
+
 module.exports =router
