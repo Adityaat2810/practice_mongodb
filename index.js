@@ -6,7 +6,7 @@ const adminRouter=require("./routes/admin");
 const userRoute = require('./routes/user');
 
 app.use(bodyParser.json());
-// app.use('/admin',adminRouter);
+app.use('/admin',adminRouter);
 // app.use('/user',userRoute);
 
 const PORT = 3000;
